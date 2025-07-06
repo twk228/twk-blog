@@ -1,0 +1,335 @@
+.Front {
+  // min-width: 1300px;
+
+  .header {
+    height: 0.8rem;
+    background-color: #35393d;
+    color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0.5rem;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    &-left{
+      display: flex;
+      align-items: center;
+      h1 {
+        font-size: 0.45rem;
+        font-family: "宋体";
+        cursor: pointer;
+      }
+      .icon{
+        display: flex;
+        align-items: center;
+        animation: left-turn 1s infinite;
+        .tip-text{
+          font-size: 13px;
+          margin-left: 5px;
+        }
+      }
+      @keyframes left-turn {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(25%);
+        }
+        100% {
+          transform: translateX(0); 
+        }
+      }
+    }
+    
+    ul {
+      width: 5rem;
+      display: flex;
+      li {
+        position: relative;
+        height: 30px;
+        margin-right: 30px;
+        font-size: 17px;
+        letter-spacing: 2px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: color 0.5s;
+      }
+      li::before {
+        width: 0%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        right: 0;
+        -webkit-transition: width 0.5s;
+        transition: width 0.5s;
+        border-top: 1px solid #fcd088;
+      }
+      li:hover:before {
+        width: 100%;
+        border-top: 1px solid #fcd088;
+        -webkit-transition: width 0.5s;
+        transition: width 0.5s;
+      }
+      li::after {
+        width: 0%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        left: 0;
+        -webkit-transition: width 0.5s;
+        transition: width 0.5s;
+        border-bottom: 1px solid #fcd088;
+      }
+      li:hover:after {
+        width: 100%;
+        border-bottom: 1px solid #fcd088;
+        -webkit-transition: width 0.5s;
+        transition: width 0.5s;
+      }
+      li:hover {
+        color: #e3be7e;
+        transition: color 0.3s;
+      }
+      .active{
+        color: #e3be7e;
+        transition: color 0.3s;
+      }
+      .active::before{
+        width: 100%;
+        border-bottom: 1px solid #fcd088;
+        -webkit-transition: width 0.5s;
+        transition: width 0.5s;
+      }
+      .active::after{
+        width: 100%;
+        border-bottom: 1px solid #fcd088;
+        -webkit-transition: width 0.5s;
+        transition: width 0.5s;
+      }
+    }
+    .right-btn {
+      position: absolute;
+      right: 0.5rem;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      .nav-toolBtn{
+        color: #e3be7e;
+      }
+      .admin-btn {
+        --color: #e3be7e;
+        position: relative;
+        padding: 0.15rem 0.2rem;
+        color: var(--color);
+        text-decoration: none;
+        // text-transform: uppercase;
+        transition: 0.5s;
+        letter-spacing: 0.04rem;
+        overflow: hidden;
+        background-color: transparent;
+        border: 0px;
+
+        span {
+          position: absolute;
+          display: block;
+        }
+        span:nth-child(1) {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 0.02rem;
+          background: linear-gradient(90deg, transparent, var(--color));
+          animation: animate1 1s linear infinite;
+        }
+        @keyframes animate1 {
+          0% {
+            left: -100%;
+          }
+          50%,
+          100% {
+            left: 100%;
+          }
+        }
+        span:nth-child(2) {
+          top: -100%;
+          right: 0;
+          width: 0.02rem;
+          height: 100%;
+          background: linear-gradient(180deg, transparent, var(--color));
+          animation: animate2 1s linear infinite;
+          animation-delay: 0.25s;
+        }
+        @keyframes animate2 {
+          0% {
+            top: -100%;
+          }
+          50%,
+          100% {
+            top: 100%;
+          }
+        }
+        span:nth-child(3) {
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(270deg, transparent, var(--color));
+          animation: animate3 1s linear infinite;
+          animation-delay: 0.5s;
+        }
+        @keyframes animate3 {
+          0% {
+            right: -100%;
+          }
+          50%,
+          100% {
+            right: 100%;
+          }
+        }
+
+        span:nth-child(4) {
+          bottom: -100%;
+          left: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(360deg, transparent, var(--color));
+          animation: animate4 1s linear infinite;
+          animation-delay: 0.75s;
+        }
+        @keyframes animate4 {
+          0% {
+            bottom: -100%;
+          }
+          50%,
+          100% {
+            bottom: 100%;
+          }
+        }
+      }
+      .admin-btn:hover {
+        background: var(--color);
+        color: #050801;
+        box-shadow: 0 0 5px var(--color), 0 0 25px var(--color),
+          0 0 50px var(--color), 0 0 200px var(--color);
+        -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+      }
+    }
+  }
+  .ding {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #35393d;
+    position: fixed;
+    right: 30px;
+    top: 80vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .ding:hover {
+    color: #fcd088;
+  }
+  .move_ding {
+    animation: move_ding 1s;
+  }
+  .leave_ding {
+    animation: leave_ding 1s;
+  }
+}
+
+@keyframes move_ding {
+  0% {
+    -webkit-transform: translateX(200px);
+    opacity: 0;
+  }
+}
+
+@keyframes leave_ding {
+  100% {
+    -webkit-transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+/* 修改滚动条的宽度和高度 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+  background-color: #35393d;
+}
+/* 修改滚动条的形状 */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #8e5e10;
+}
+/* 修改滚动条轨道的形状 */
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+
+.my-drawer{
+  ul {
+    width: 100%;
+    li {
+      height: 0.6rem;
+      font-size: 0.34rem;
+      letter-spacing: 0.02rem;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+    .active {
+      color: #e3be7e;
+    }
+  }
+}
+
+// 移动端屏幕适配
+@media screen and (min-width: 375px) {
+  .Front{
+    .header{
+      ul{
+        display: none;
+      }
+    }
+    .right-btn{
+      .nav-toolBtn{
+        display: block;
+      }
+      .admin-btn{
+        display: none;
+      }
+    }
+  }
+}
+// PC端屏幕适配
+@media screen and (min-width: 750px) {
+  .Front{
+    .header{
+      ul{
+        display: flex;
+      }
+    }
+    .right-btn{
+      .nav-toolBtn{
+        display: none;
+      }
+      .admin-btn{
+        display: inline-block;
+      }
+    }
+  }
+  
+}

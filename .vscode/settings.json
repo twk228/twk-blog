@@ -1,0 +1,19 @@
+{
+    //powser mode 开启插件
+  "powermode.enabled": false,
+  // 时间间隔
+  "powermode.combo.timeout": 0,
+  // 关闭抖动
+  "powermode.shake.enabled": false,
+  // 烟花
+  "powermode.presets": "fireworks"
+  //样式
+  // 火焰
+  // "powermode.presets": "flames",
+  // 炸裂
+  // "powermode.presets": "exploding-rift",
+  // 爆炸
+  // "powermode.presets": "simple-rift",
+  // 粒子
+  // "powermode.presets": "particles",
+}

@@ -1,0 +1,51 @@
+/* 公共样式 */
+
+
+/* magin */
+.mr-r-10 {
+    margin-right: 10px;
+}
+.mr-l-10{
+    margin-left: 10px;
+}
+.mr-l-15{
+    margin-left: 15px;
+}
+.mr-b-10 {
+    margin-bottom: 10px;
+}
+
+
+/* 弹性布局 */
+.fl-sta-cen{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.fl-cen-sta{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.fl-btw-cen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.full-width{
+    width: 100%;
+}
+.full-height{
+    height: 100%;
+}
+
+.ellipsis{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+

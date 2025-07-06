@@ -1,0 +1,16 @@
+.AdminTable {
+  // img{
+  //   max-width: 30px;
+  //   max-height: 30px;
+  // }
+  .pagination {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .admin-table-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+}

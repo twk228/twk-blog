@@ -1,0 +1,159 @@
+.detail {
+  height: 100%;
+
+  // 头部
+  .detail_header {
+    // background: url("../../assets/detail/1.jpg") no-repeat;
+    // background-size: 100% 100%;
+    // height: 5rem;
+    background-color: #3b3e42;
+    padding: 1rem 0.5rem;
+    padding-top: 1.5rem;
+
+    .detail_text {
+      .text_title {
+        font-size: 0.5rem;
+        color: #fff;
+        line-height: 0.7rem;
+        margin-bottom: 0.4rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .text_title::after {
+        content: "智慧工地可视化管理";
+        position: absolute;
+        color: #000000;
+        transform: translate(-110%, 0.15rem) scaleY(0.5) skew(50deg);
+        z-index: -1;
+        filter: blur(1px);
+        white-space: nowrap;
+        -webkit-mask-image: linear-gradient(transparent, #000, #000);
+      }
+    }
+  }
+
+  // 中间
+  .detail_main {
+    padding: 20px 100px;
+    // background-color: #f7f9fe;
+    background-color: #ffffff;
+
+    // 中间左边主题部分
+    .left-section {
+      .markdown-body {
+        .code-wrapper {
+          background-color: #111b27;
+          border: 1px solid #e3e8f7;
+          border-radius: 10px;
+          padding: 10px;
+
+          .code-header {
+            display: flex;
+            align-items: center;
+            height: 16px;
+            color: #90a4ae;
+            position: relative;
+            font-size: 16px;
+            padding-left: 70px;
+
+            .preview-code-copy {
+              position: absolute;
+              right: 20px;
+
+              .copy-success {
+                margin-right: 10px;
+                animation: opacity-0-1-0 3s;
+              }
+
+              @keyframes opacity-0-1-0 {
+                0% {
+                  opacity: 0;
+                }
+
+                50% {
+                  opacity: 1;
+                }
+
+                100% {
+                  opacity: 0;
+                }
+              }
+            }
+
+            .code-rotate-down {
+              position: absolute;
+              right: -10px;
+              font-size: 14px;
+              transition: all .3s;
+            }
+
+            .code-rotate-right {
+              position: absolute;
+              right: -10px;
+              font-size: 14px;
+              transform: rotateZ(-90deg);
+              transition: all .3s;
+            }
+          }
+
+          .code-header::after {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #fc625d;
+            -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+            box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+            content: '';
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
+// 移动端屏幕适配
+@media screen and (min-width: 375px) {
+  .detail {
+    .detail_header {
+      background-color: #3b3e42;
+    }
+
+    .detail_main {
+      width: 100%;
+      padding: 0.3rem 0.5rem;
+      border: 1px solid #e3e8f7;
+      border-top-left-radius: 0.3rem;
+      border-top-right-radius: 0.3rem;
+      margin-top: -0.3rem;
+    }
+  }
+}
+
+// PC端屏幕适配
+@media screen and (min-width: 750px) {
+  .detail {
+    .detail_main {
+      padding: 20px 200px;
+      border: 1px solid #e3e8f7;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      margin-top: 0;
+
+      .left-section {
+        padding: 50px 30px;
+        border: 1px solid #e3e8f7;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background-color: #fefeff;
+        margin: 20px 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,375 @@
+.home {
+  height: 100%;
+
+  // banner图部分
+  .banner {
+    height: 6.95rem;
+    background: url("../../assets/img/bg.png") no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .lottie-cat {
+      width: 3rem;
+      position: absolute;
+      left: 50%;
+      top: 0px;
+    }
+
+    .inner {
+      height: 50%;
+      width: 50%;
+      color: white;
+
+      h1 {
+        font-size: 0.8rem;
+      }
+
+      h1:first-child {
+        text-align: left;
+      }
+
+      h1:nth-child(2) {
+        text-align: right;
+      }
+
+      .move_1 {
+        animation: move_1 1s;
+      }
+
+      .move_2 {
+        animation: move_2 1s;
+      }
+
+      .move_3 {
+        animation: move_3 1s;
+      }
+
+      button {
+        display: block;
+        width: 1.85rem;
+        height: 0.6rem;
+        border: 2px solid #8e5e10;
+        background-color: transparent;
+        font-size: 0.18rem;
+        padding: 0.1rem 0.3rem;
+        box-sizing: border-box;
+        margin: 0.8rem auto;
+        box-sizing: border-box;
+        color: #8e5e10;
+        font-family: "宋体";
+      }
+
+      button:hover {
+        border: 2px solid #fcd088;
+        color: black;
+        background-color: #fcd088;
+      }
+    }
+  }
+
+  //   项目经验部分
+  .project {
+    background-color: #f5f9f8;
+    padding: 0.4rem 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      height: 0.6rem;
+      line-height: 0.6rem;
+      font-size: 0.4rem;
+      font-weight: 700;
+      font-family: "宋体";
+      text-align: center;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+
+      .item {
+        width: 3.2rem;
+        height: 3rem;
+        margin-left: 0.2rem;
+        margin-bottom: 0.2rem;
+        position: relative;
+        perspective: 10rem;
+        cursor: pointer;
+
+        .bg {
+          width: 100%;
+          height: 100%;
+          min-height: 1.5rem;
+          position: absolute;
+          z-index: -1;
+        }
+
+        .just,
+        .back {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          backface-visibility: hidden;
+          transition: transform 0.25s ease-in-out;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          font-size: 0.2rem;
+          padding: 0px 0.4rem;
+          box-sizing: border-box;
+        }
+
+        .just {
+          transform: rotateY(0deg);
+          background-color: rgba(0, 0, 0, 0.5);
+
+          span {
+            margin-top: 0.1rem;
+          }
+        }
+
+        .back {
+          transform: rotateY(180deg);
+          background-color: rgba(26, 96, 248, 0.8);
+
+          span {
+            margin-top: 0.1rem;
+          }
+
+          p {
+            width: 100%;
+            margin-top: 0.15rem;
+            font-size: 0.14rem;
+            color: #9ec6f5;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+          }
+
+          a {
+            margin-top: 0.1rem;
+            font-size: 0.16rem;
+            font-weight: 100;
+            color: white;
+            border-bottom: 0.01rem solid white;
+          }
+        }
+      }
+
+      .item:hover {
+        .just {
+          transform: rotateY(-180deg);
+        }
+
+        .back {
+          transform: rotateY(0deg);
+        }
+      }
+    }
+  }
+
+  //   智慧系列
+  .zhihui {
+    background-color: #f5f9f8;
+    padding: 0.4rem 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      height: 0.6rem;
+      line-height: 0.6rem;
+      font-size: 0.4rem;
+      font-weight: 700;
+      font-family: "宋体";
+      text-align: center;
+      margin-bottom: 0.1rem;
+    }
+
+    .content {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .swiper {
+        width: 100%;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+
+        .swiper-slide {
+          background-position: center;
+          background-size: cover;
+          width: 6rem;
+          height: 3.5rem;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  // 经典案例
+  .anli {
+    background-color: #f5f9f8;
+    padding: 0.4rem 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      height: 0.6rem;
+      line-height: 0.6rem;
+      font-size: 0.4rem;
+      font-weight: 700;
+      font-family: "宋体";
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .lottie-monster {
+        width: 5rem;
+      }
+
+      .swiper {
+        width: 2.8rem;
+        height: 5.2rem;
+
+        .swiper-slide {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 0.18rem;
+          font-size: 0.22rem;
+          font-weight: bold;
+          color: #fff;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+      }
+    }
+  }
+  // 移动端屏幕适配
+  @media screen and (min-width: 375px) {
+    .banner{
+      .inner{
+        position: relative;
+        h1{
+          position: absolute;
+          font-size: 0.8rem;
+          writing-mode: vertical-lr;
+          white-space: nowrap;
+        }
+        h1:first-child {
+          left: 15%;
+        }
+        h1:nth-child(2) {
+          top: 30%;
+          right: 5%;
+        }
+        button{
+          display: none;
+        }
+      }
+    }
+    .project {
+      padding: 0.4rem 0;
+      .content{
+        flex-direction: column;
+        align-items: center;
+        .item{
+          width: 80%;
+          height: 3.5rem;
+        }
+      }
+    }
+    .zhihui{
+      padding: 0.4rem 0;
+    }
+  }
+  // PC端屏幕适配
+  @media screen and (min-width: 750px) {
+    .banner{
+      .inner{
+        h1{
+          position: static;
+          font-size: 0.8rem;
+          writing-mode: horizontal-tb;
+        }
+        h1:first-child {
+          text-align: left;
+        }
+        h1:nth-child(2) {
+          text-align: right;
+        }
+        button{
+          display: block;
+        }
+      }
+    }
+    .project {
+      padding: 0.4rem 2rem;
+      .content{
+        flex-direction: row;
+        .item {
+          width: 3.2rem;
+          height: 3rem;
+        }
+      }
+    }
+    .zhihui{
+      padding: 0.4rem 2rem;
+    }
+  }
+}
+
+@keyframes move_1 {
+  0% {
+    -webkit-transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+@keyframes move_2 {
+  0% {
+    -webkit-transform: translateX(200px);
+    opacity: 0;
+  }
+}
+
+@keyframes move_3 {
+  0% {
+    -webkit-transform: translateY(200px);
+    opacity: 0;
+  }
+}

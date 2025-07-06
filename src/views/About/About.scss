@@ -1,0 +1,161 @@
+ul{
+  list-style: none;
+}
+.about {
+  display: flex;
+  height: calc(100vh - 0.8rem);
+  box-sizing: border-box;
+  position: relative;
+
+  .aside {
+    width: 15%;
+    height: 100%;
+    padding: 30px 20px;
+    background-color: #272822;
+    box-sizing: border-box;
+    overflow-y: auto;
+
+    .ant-timeline-item-tail {
+      background-color: #f2f2f2d1;
+    }
+
+    .year {
+      color: #f2f2f2;
+      cursor: pointer;
+    }
+  }
+
+  .main-section {
+    display: flex;
+
+    .code-editor {
+      height: 100%;
+      flex: 1;
+    }
+
+    .code-result {
+      height: 100%;
+      flex: 1;
+      position: relative;
+
+      .refresh {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #1e1e1e;
+        z-index: 1000;
+      }
+    }
+  }
+}
+
+.about-drawer {
+  ul {
+    height: 100%;
+
+    li {
+      height: 60px;
+      line-height: 60px;
+      cursor: pointer;
+      padding: 0px 20px;
+      box-sizing: border-box;
+      font-size: 17px;
+      font-family: "宋体";
+      box-sizing: border-box;
+      color: white;
+
+      .zi {
+        display: inline-block;
+        white-space: nowrap;
+      }
+    }
+
+    li:hover {
+      background-color: #1c88cf;
+    }
+
+    .nav-active {
+      background-color: #1c88cf;
+    }
+  }
+}
+
+// 移动端屏幕适配
+@media screen and (min-width: 375px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    .headerToolBar{
+      height: 0.8rem;
+      background-color: #272822;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+      .navToolBtn {
+        position: absolute;
+        left: 0.5rem;
+        color: #fcd088;
+      }
+      ul{
+        display: flex;
+        li{
+          height: 0.8rem;
+          line-height: 0.8rem;
+          padding: 0px 10px;
+        }
+        .active{
+          color: #fcd088;
+        }
+      }
+    }
+    .navToolBtn {
+      display: flex;
+    }
+
+    .aside {
+      display: none;
+    }
+
+    .main-section {
+      flex: 1;
+      width: 100%;
+      flex-direction: column;
+      .code-result{
+        display: none;
+      }
+    }
+  }
+}
+
+// PC端屏幕适配
+@media screen and (min-width: 750px) {
+  .about {
+    display: flex;
+    flex-direction: row;
+    .headerToolBar{
+      display: none;
+    }
+
+    .aside {
+      display: block;
+    }
+
+    .main-section {
+      width: 85%;
+      flex-direction: row;
+      .code-editor{
+        display: block;
+      }
+      .code-result{
+        display: block;
+      }
+    }
+  }
+}

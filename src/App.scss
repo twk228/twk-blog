@@ -1,0 +1,20 @@
+.App {
+  min-width: 90vw;
+  box-sizing: border-box;
+}
+
+/* 修改滚动条的宽度和高度 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+  background-color: #35393d;
+}
+/* 修改滚动条的形状 */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #8e5e10;
+}
+/* 修改滚动条轨道的形状 */
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
