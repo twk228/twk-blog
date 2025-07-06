@@ -9,7 +9,7 @@
 import React, { useEffect } from "react";
 import "./index.scss";
 import { Layout } from "antd";
-import { Typer } from "./Typer";
+// import { Typer } from "./Typer";
 import { useNavigate } from "react-router-dom";
 const WelcomeLayout = () => {
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ const WelcomeLayout = () => {
       <div className="welcome" onClick={redirect}>
         {/* 背景 */}
         {/* <img className="bg" src="https://s2.loli.net/2025/01/21/h1rMmD24cfQy7dO.jpg" alt="" /> */}
-        <Typer />
+        {/* <Typer /> */}
         <div className="bird-container bird-container--one">
           <div className="bird bird--one"></div>
         </div>
